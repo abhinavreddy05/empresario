@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(4, 3, 41);
+}
+
+.Main-page-desktop {
+    padding-top: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 30em;
+    height: 30em;
+}
+
+.Introduction-Empressario {
+    margin-top: 6em;
+}
+
+.register-empressario {
+    font-size: 4em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(211, 191, 17);
+    font-weight: 800;
+}
+
+.register-empressario-1 {
+    font-size: 2em;
+    font-family: cursive;
+    color: rgb(137, 141, 11);
+    font-weight: 300;
+}
+
+.register-empressario-2 {
+    font-size: 3em;
+    font-family: cursive;
+    color: rgb(158, 211, 23);
+    font-weight: 600;
+}
+
+
+
+.register-empressario-3 {
+    width: 90%;
+    /* margin: 40px auto; */
+    /* text-align: center; */
+}
+
+.btn-12 {
+    line-height: 42px;
+    background-color: rgb(6, 5, 60);
+    text-align: left;
+    justify-content: end;
+    align-items: end;
+}
+
+.btn-12 span {
+    background: rgb(144, 233, 1);
+    background: linear-gradient(0deg, rgb(181, 227, 12) 0%, rgb(211, 194, 10) 100%);
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 150px;
+    height: 40px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.btn-12 span:nth-child(1) {
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12 span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12:hover span:nth-child(1) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.btn-12:hover span:nth-child(2) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    color: transparent;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+
+.Introduction-Empressario {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    flex-wrap: wrap;
+    line-height: 6em;
+}
