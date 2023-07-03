@@ -1,0 +1,93 @@
+* {
+    background-color: #0a1f2a;
+    font-family: 'Baloo 2', cursive !important;
+    top: 15px;
+}
+
+nav {
+    /* background-color: #333; */
+    height: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    font-size: 13px;
+}
+
+.navbar-item a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    transition: 0.3s all;
+}
+
+.navbar-item a:after{
+    content: "";
+    position: relative;
+    background-color: rgb(215, 200, 144);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.navbar-link:hover:after{
+    width: 100%;
+}
+
+li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-attachment: coral;
+    margin: auto;
+    display: block;
+}
+
+li a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+}
+
+li a:hover{
+    color: coral;
+}
+
+.navbar-item a:hover{
+    color: rgb(215, 200, 144);
+}
+
+.hover-line::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(215, 200, 144);
+    transition: width .3;
+}
+
+.register-btn{
+    float: right;
+    padding: 15px 50px;
+    transition: all .3s;
+	/* position: relative; */
+	overflow: hidden;
+	z-index: 1;
+}
+
+button{
+    color: #0a1f2a;
+    background-color: rgb(215, 200, 144);
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+}
