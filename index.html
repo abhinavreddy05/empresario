@@ -13,6 +13,8 @@
 <body>
     <div class="navbar-empressario">
         <nav class="navbar-list">
+            <input type="checkbox" class="toggle-menu">
+            <div class="hamburger"></div>
             <ul class="navbar-list-items">
                 <li class="navbar-item"><a class="navbar-link" href="#">HOME</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#">INFO</a></li>
@@ -52,7 +54,7 @@
             <img src="empressario-logo.png" class="logo" alt="">
         </div>
     </div>
-    <!-- <div class="Main-page-desktop-slider">
+    <div class="Main-page-desktop-slider">
 
         <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
 
@@ -99,10 +101,10 @@
 
                     </div>
 
-                    <nav>
+                    <nav1>
                         <a id="leftBtn" class="prev"><i class="fa fa-arrow-left"></i></a>
                         <a id="rightBtn" class="next"><i class="fa fa-arrow-right"></i></a>
-                    </nav>
+                    </nav1>
                 </div>
             </div>
 
@@ -112,14 +114,14 @@
                 <div class="slide musk-bg"></div>
             </div>
 
-            <div id="nav-cirlces">
+            <div id="nav1-cirlces">
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
             </div>
 
         </div>
-    </div> -->
+    </div>
 
 
 
@@ -146,8 +148,8 @@
 
             var animate = setInterval(function () {
                 var $this = $(".circle"),
-                    currentActiveBubble = $("#nav-cirlces").find(".active"),
-                    position = $("#nav-cirlces")
+                    currentActiveBubble = $("#nav1-cirlces").find(".active"),
+                    position = $("#nav1-cirlces")
                         .children()
                         .index(currentActiveBubble),
                     num = $(".circle").length;
@@ -207,8 +209,8 @@
                 clearInterval(animate);
 
                 var $this = $(this),
-                    currentActiveBubble = $("#nav-cirlces").find(".active"),
-                    position = $("#nav-cirlces")
+                    currentActiveBubble = $("#nav1-cirlces").find(".active"),
+                    position = $("#nav1-cirlces")
                         .children()
                         .index(currentActiveBubble),
                     num = $(".circle").length;
