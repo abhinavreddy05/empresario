@@ -24,14 +24,19 @@
                 <li class="navbar-item"><a class="navbar-link" href="#">MEDIA</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#">SPONSORSHIP ENQUIRY</a></li>
                 <li class="navbar-item"><a href="#">LOGIN</a></li>
-                <a class="register-btn" href="#"><button class="register-btn1">REGISTER</button></a>
+                <!-- <a class="register-btn" href="#"><button class="register-btn1">REGISTER</button></a> -->
             </ul>
         </nav>
     </div>
     <div class="Main-page-desktop">
         <div class="Introduction-Empressario" data-aos="fade-up" data-aos-duration="1000">
             <div class="register-empressario">
-                REGISTER NOW!
+                <!-- REGISTER NOW! -->
+                <main class="text-container">
+                    <svg class="text-stroke" viewBox="0 0 500 100" width="100%" height="100%">
+                        <text class="text" x="20" y="75">REGISTER</text><text class="text" x="20" y="75">REGISTER</text>
+                    </svg>
+                </main>
             </div>
             <div class="register-empressario-1">
                 AND GET A CHANCE TO WIN PRIZES WORTH
@@ -47,12 +52,219 @@
             <img src="empressario-logo.png" class="logo" alt="">
         </div>
     </div>
+    <!-- <div class="Main-page-desktop-slider">
+
+        <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <div id="container">
+
+            <div id="holder">
+
+                <div id="image">
+                    <div class="img jobs"></div>
+                    <div class="img zuck"></div>
+                    <div class="img musk"></div>
+                </div>
+
+                <div id="right"></div>
+
+                <div id="text">
+                    <div id="centerText">
+
+                        <p class="quote">
+                            <i class='fa fa-info-circle' style='font-size:30px;color:blue'></i> Products / Services:
+                            <br> <br> Describe the Product / Service Offered Here <br> <br> <i
+                                class='fa fa-hand-point-right' style='font-size:30px;color:blue'></i> Point 1 <br> <br>
+                            <i class='fa fa-hand-point-right' style='font-size:30px;color:blue'></i> Point 2
+                        </p>
+
+                        <p class="quote">
+                            <i class='fa fa-info-circle' style='font-size:30px;color:blue'></i> Products / Services:
+                            <br> <br> Describe the Product / Service Offered Here <br> <br> <i
+                                class='fa fa-hand-point-right' style='font-size:30px;color:blue'></i> Point 1 <br> <br>
+                            <i class='fa fa-hand-point-right' style='font-size:30px;color:blue'></i> Point 2
+                        </p>
+
+                        <p class="quote">
+                            <i class='fa fa-info-circle' style='font-size:30px;color:blue'></i> Products / Services:
+                            <br> <br> Describe the Product / Service Offered Here <br> <br> <i
+                                class='fa fa-hand-point-right' style='font-size:30px;color:blue'></i> Point 1 <br> <br>
+                            <i class='fa fa-hand-point-right' style='font-size:30px;color:blue'></i> Point 2
+                        </p>
+
+                    </div>
+
+                    <nav>
+                        <a id="leftBtn" class="prev"><i class="fa fa-arrow-left"></i></a>
+                        <a id="rightBtn" class="next"><i class="fa fa-arrow-right"></i></a>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="bg">
+                <div class="slide jobs-bg"></div>
+                <div class="slide zuck-bg"></div>
+                <div class="slide musk-bg"></div>
+            </div>
+
+            <div id="nav-cirlces">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+
+        </div>
+    </div> -->
+
+
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         // Initialize AOS library
         AOS.init();
+        $(window).load(function () {
+            $(".circle")
+                .first()
+                .addClass("active");
+            $("#bg .slide")
+                .first()
+                .addClass("active");
+            $("#image .img")
+                .first()
+                .addClass("active");
+            $(".quote")
+                .first()
+                .addClass("active");
+
+            var animate = setInterval(function () {
+                var $this = $(".circle"),
+                    currentActiveBubble = $("#nav-cirlces").find(".active"),
+                    position = $("#nav-cirlces")
+                        .children()
+                        .index(currentActiveBubble),
+                    num = $(".circle").length;
+
+                if (position < num - 1) {
+                    $(".active")
+                        .removeClass("active")
+                        .next()
+                        .addClass("active");
+                } else {
+                    $(".circle")
+                        .removeClass("active")
+                        .first()
+                        .addClass("active");
+                    $("#bg .slide")
+                        .removeClass("active")
+                        .first()
+                        .addClass("active");
+                    $("#image .img")
+                        .removeClass("active")
+                        .first()
+                        .addClass("active");
+                    $(".quote")
+                        .removeClass("active")
+                        .first()
+                        .addClass("active");
+                }
+                position++;
+            }, 4500);
+
+            $(".circle").click(function () {
+                clearInterval(animate);
+
+                var $this = $(this),
+                    $siblings = $this.parent().children(),
+                    position = $siblings.index($this);
+
+                $(".circle")
+                    .removeClass("active")
+                    .eq(position)
+                    .addClass("active");
+                $("#bg .slide")
+                    .removeClass("active")
+                    .eq(position)
+                    .addClass("active");
+                $("#image .img")
+                    .removeClass("active")
+                    .eq(position)
+                    .addClass("active");
+                $(".quote")
+                    .removeClass("active")
+                    .eq(position)
+                    .addClass("active");
+            });
+
+            $("#rightBtn , #leftBtn").click(function () {
+                clearInterval(animate);
+
+                var $this = $(this),
+                    currentActiveBubble = $("#nav-cirlces").find(".active"),
+                    position = $("#nav-cirlces")
+                        .children()
+                        .index(currentActiveBubble),
+                    num = $(".circle").length;
+
+                if ($this.hasClass("next")) {
+                    if (position < num - 1) {
+                        $(".active")
+                            .removeClass("active")
+                            .next()
+                            .addClass("active");
+                    } else {
+                        $(".circle")
+                            .removeClass("active")
+                            .first()
+                            .addClass("active");
+                        $("#bg .slide")
+                            .removeClass("active")
+                            .first()
+                            .addClass("active");
+                        $("#image .img")
+                            .removeClass("active")
+                            .first()
+                            .addClass("active");
+                        $(".quote")
+                            .removeClass("active")
+                            .first()
+                            .addClass("active");
+                    }
+                } else {
+                    if (position === 0) {
+                        $(".circle")
+                            .removeClass("active")
+                            .last()
+                            .addClass("active");
+                        $("#bg .slide")
+                            .removeClass("active")
+                            .last()
+                            .addClass("active");
+                        $("#image .img")
+                            .removeClass("active")
+                            .last()
+                            .addClass("active");
+                        $(".quote")
+                            .removeClass("active")
+                            .last()
+                            .addClass("active");
+                    } else {
+                        $(".active")
+                            .removeClass("active")
+                            .prev()
+                            .addClass("active");
+                    }
+                }
+            });
+        });
+
     </script>
 </body>
 
