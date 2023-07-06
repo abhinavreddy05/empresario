@@ -1,0 +1,212 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    background-color: #D9D9D9;
+    padding: 0;
+    margin: 0;
+}
+
+.preloader{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-image: url('./bgleaves.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    animation: fade 1s linear, float 3s linear infinite alternate;
+}
+
+@keyframes float{
+    from{
+        background-position: 50% 0%;
+    }
+    to{
+        background-position: 55% 4%;
+    }
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0.0;
+    }
+    20%{
+        opacity: 0.1;
+    }
+    40%{
+        opacity: 0.2;
+    }
+    60%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.preloader #person1{
+    animation: person1 2s linear infinite alternate;
+}
+
+@keyframes person1{
+    from{
+        transform: translateY(-2px) translateX(0px);
+    }
+    to{
+        transform: translateY(2px) translateX(-2px);
+    }
+}
+
+.preloader #person2{
+    animation: person2 2s linear infinite alternate;
+    animation-delay: 0.2s;
+}
+
+@keyframes person2{
+    from{
+        transform: translateY(-2px) translateX(0px);
+    }
+    to{
+        transform: translateY(2px) translateX(2px);
+    }
+}
+
+.preloader #bird{
+    animation: fly 3.5s linear, move 2.5s linear 3.8s infinite alternate;
+    z-index: 2;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes move{
+    from{
+        transform: rotateZ(6deg);
+    }
+    to{
+        transform: rotateZ(-8deg);
+    }
+}
+
+@keyframes fly{
+    0%{
+        transform: translateX(1.8rem) translateY(-1.6rem);
+    }
+    30%{
+        transform: translateX(1.2rem) translateY(-0.8rem);
+    }
+    60%{
+        transform: translateX(0.8rem) translateY(-0.2rem);
+    }
+    80%{
+        transform: translateX(-0.2rem) translateY(-0.2rem);
+    }
+    100%{
+        transform: translateX(0rem) translateY(0rem);
+    }
+}
+
+.preloader #wheel{
+    animation: fill 1s linear, wheel 2s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes wheel{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(150deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+.preloader #leaf1{
+    animation: leaf1 2s linear infinite alternate;
+}
+
+.preloader #leaf2{
+    animation: leaf2 2s linear infinite alternate;
+}
+
+@keyframes leaf1{
+    from{
+        transform: translate(0) rotateX(0deg) rotateY(0deg);
+    }
+    to{
+        transform: translateY(15px) rotateX(30deg) rotateY(10deg);
+    }
+}
+
+@keyframes leaf2{
+    from{
+        transform: translate(0) rotateX(0deg) rotateY(0deg);
+    }
+    to{
+        transform: translateY(-15px) rotateX(30deg) rotateY(10deg);
+    }
+}
+
+.preloader .loader{
+    width: 60vw;
+    height: 4px;
+    position: relative;
+    overflow: hidden;
+    background-color: #9BC14A;
+    border-radius: 20px;
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    left: -50%;
+    height: 4px;
+    width: 20%;
+    background-color: #3C6743;
+    animation: lineAnim 2s linear infinite;
+    border-radius: 20px;
+}
+
+@keyframes lineAnim {
+    0% {
+        left: -40%;
+    }
+    50% {
+        left: 20%;
+        width: 80%;
+    }
+    100% {
+        left: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .preloader{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    @keyframes float {
+        from{
+            background-position: 70px 0%;
+        }
+        to{
+            background-position: 90px 2px;
+        }
+    }
+
+    .preloader svg{
+        width: 100%;
+        height: 30%;
+        margin: 1rem 0;
+    }
+}
