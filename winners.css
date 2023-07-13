@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    background-color: #0e2c3c;
+}
+
+.winners-content {
+    height: 320px;
+    width: 100%;
+    max-height: 50%;
+    background-color: blanchedalmond;
+    text-align: center;
+    font-family: 'Baloo 2', cursive !important;
+}
+h1 {
+    font-size: 55px;
+}
+
+.tab-container {
+    background-color: blanchedalmond;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.button-container {
+    width: 15%;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 10px;
+    background-color: #0e2c3c;
+    color: rgb(243, 205, 159);
+    font-size: 17px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 1;
+}
+.button-container:hover {
+    background-color: rgb(227, 176, 112);
+    color: #0e2c3c;
+} 
+
+.winners-container2 {
+    color: rgb(243, 205, 159);
+    font-size: 47px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.winners-cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 320px;
+}
+.winner-card1, .winner-card2 {
+    border: solid 2px white;
+    border-radius: 15px;
+    width: 430px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-color: #43aad3
+}
+.card-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 30px;
+    color: #0e2c3c;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 17px;
+}
+.winner-card1:hover .card-body{
+    right: 0;
+}
+.winner-card2:hover .card-body{
+    right: 0;
+}
