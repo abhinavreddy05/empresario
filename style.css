@@ -7,7 +7,7 @@
 
 body {
 
-    /* overflow: hidden; */
+    /* overflow-x: hidden; */
 
 
 }
@@ -1473,3 +1473,61 @@ h2 {
 }
 
 /* tracks */
+
+
+
+@media only screen and (max-width: 1282px) and (min-width: 400px) {
+    .Main-page-desktop {
+        /* background-color: rgb(230, 230, 207); */
+        padding-top: 3em;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 93vh;
+        text-align: center;
+
+    }
+
+    .Introduction-Empressario {
+        padding-left: 20em;
+    }
+}
+
+
+.container-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+
+
+}
+
+.flex-row {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+
+.heading-name {
+    font-size: 2em;
+}
+
+.heading-portfolio {
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+.heading-contact {
+    margin-top: 2em;
+    font-size: 1.5em;
+}
